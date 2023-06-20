@@ -7,7 +7,6 @@ import 'dart:io';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart';
 
-
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -580,7 +579,7 @@ class TestDetailPresenter {
 
       if (q.numPart == PartOfTest.PART1.get) {
         format = 'part1[$questionId]';
-      
+
         reanswerFormat = 'reanswer_part1[$questionId]';
       }
 
@@ -617,6 +616,7 @@ class TestDetailPresenter {
     }
 
     request.fields.addAll(formData);
+    print(formData.toString());
 
     try {
       StreamedResponse strResponse =
